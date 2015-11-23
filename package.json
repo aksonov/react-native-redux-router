@@ -1,0 +1,35 @@
+{
+  "author": {
+    "email": "akso.nov@gmail.com",
+    "name": "Pavlo Aksonov",
+    "url": "http://aksonov.com"
+  },
+  "dependencies": {
+    "react-redux": "^3.1.0",
+    "redux": "^3.0.4"
+  },
+  "description": "React Native Router using Redux architecture",
+  "directories": {},
+  "installable": true,
+  "keywords": [
+    "flux",
+    "redux",
+    "navigation",
+    "react-components",
+    "react-native",
+    "react-native-router",
+    "router",
+    "react-native-router-flux"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "aksonov",
+      "email": "pavlo.aksonov@gmail.com"
+    }
+  ],
+  "name": "react-native-redux-router",
+  "optionalDependencies": {},
+  "version": "1.0.0"
+}
