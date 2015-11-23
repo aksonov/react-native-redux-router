@@ -21,13 +21,10 @@ var {AppRegistry, StyleSheet,Text,View} = React;
 var Launch = require('./components/Launch');
 var Register = require('./components/Register');
 var Login = require('./components/Login');
-var {Router, routerReducer, Route, Container, Animations, Schema} = require('react-native-router-flux');
+var {Router, routerReducer, Route, Container, Animations, Schema} = require('react-native-redux-router');
 var {NavBar, NavBarModal} = require('./components/NavBar');
 var Error = require('./components/Error');
 var Home = require('./components/Home');
-var TabView = require('./components/TabView');
-var TabIcon = require('./components/TabIcon');
-var TabBarFlux = require('./components/TabBarFlux');
 
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux/native';
@@ -90,7 +87,7 @@ class Launch extends React.Component {
                 <Button onPress={()=>Actions.error("Error message")}>Go to Error page</Button>
             </View>
         );
-        //<Button onPress={Actions.tabbar}>Go to TabBar page</Button>
+    
     }
 }
 
