@@ -112,7 +112,7 @@ module.exports = Launch;
     * If some your Routes have common attributes, you may define Schema element and just use 'schema' attribute for 'route'
     * If you want to define some your custom actions, just add 'Action' element inside Router.
 3. In any 'route' component:
-    * var {Actions} = this.props.actions
-    * Actions.ACTION_NAME(PARAMS) will call appropriate action and params will be passed to next screen.
+    * var {Actions} = this.props.routes
+    * Actions.ACTION_NAME(PARAMS) will call appropriate action and params will be passed to next screen. In case you want to fire 'route' actions from inner component, you should use redux import Actions from this component (not from props), use connect method for your component and use ()=>this.props.dispatch(Actions.ACTION_NAME(PARAM) 
 
 
