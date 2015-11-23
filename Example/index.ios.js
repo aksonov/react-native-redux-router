@@ -9,9 +9,6 @@ var {Router, routerReducer, Route, Container, Animations, Schema} = require('rea
 var {NavBar, NavBarModal} = require('./components/NavBar');
 var Error = require('./components/Error');
 var Home = require('./components/Home');
-var TabView = require('./components/TabView');
-var TabIcon = require('./components/TabIcon');
-var TabBarFlux = require('./components/TabBarFlux');
 
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux/native';

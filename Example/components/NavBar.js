@@ -3,7 +3,7 @@
 var NavigationBar = require('react-native-navbar');
 var React = require('react-native');
 var {StyleSheet,View} = React;
-var {Router, Route, Animations, Schema} = require('react-native-router-flux');
+var {Router, Route, Animations, Schema} = require('react-native-redux-router');
 
 class NavBarBase extends React.Component {
     onPrev(){
