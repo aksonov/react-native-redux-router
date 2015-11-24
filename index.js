@@ -273,4 +273,4 @@ var styles = StyleSheet.create({
     }
 });
 
-module.exports = {Router: connect(state=>state.routerReducer)(Router), Action, Route, Animations, Schema, routerReducer}
+module.exports = {Router: connect(state=>state.routerReducer)(Router), Action, Actions, Route, Animations, Schema, routerReducer}

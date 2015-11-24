@@ -74,10 +74,10 @@ components/Launch.js (initial screen)
 var React = require('react-native');
 var {View, Text, StyleSheet, TouchableHighlight} = React;
 var Button = require('react-native-button');
+var {Actions} = require('react-native-redux-router');
 
 class Launch extends React.Component {
     render(){
-        var Actions = this.props.routes;
         return (
             <View style={styles.container}>
                 <Text>Launch page</Text>
@@ -111,8 +111,8 @@ module.exports = Launch;
 'name' is unique name of Route.
     * If some your Routes have common attributes, you may define Schema element and just use 'schema' attribute for 'route'
     * If you want to define some your custom actions, just add 'Action' element inside Router.
-3. In any 'route' component:
-    * var {Actions} = this.props.routes
+3. In any component:
+    * var {Actions} = require('react-native-redux-router');
     * Actions.ACTION_NAME(PARAMS) will call appropriate action and params will be passed to next screen. In case you want to fire 'route' actions from inner component, you should use redux import Actions from this component (not from props), use connect method for your component and use ()=>this.props.dispatch(Actions.ACTION_NAME(PARAM) 
 
 
