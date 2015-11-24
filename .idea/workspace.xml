@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="524839ff-09d4-4312-bab4-50dee2a2f426" name="Default" comment="" />
+    <list default="true" id="524839ff-09d4-4312-bab4-50dee2a2f426" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.babelrc" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="react-native-redux-router.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +48,16 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="2.7916667">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <marker date="1448373276000" expanded="true" signature="14:115" placeholder="{&quot;name&quot;: &quot;Pavlo Aksonov&quot;...}" />
+                <marker date="1448373276000" expanded="true" signature="135:191" placeholder="{&quot;react-redux&quot;: &quot;^3.1.0&quot;...}" />
+                <marker date="1448373276000" expanded="true" signature="206:266" placeholder="{&quot;test&quot;: &quot;mocha --compilers js:babel-core/register&quot;...}" />
+                <marker date="1448373276000" expanded="true" signature="289:483" placeholder="{&quot;babel&quot;: &quot;^6.1.18&quot;...}" />
+                <marker date="1448373276000" expanded="true" signature="608:772" placeholder="[...]" />
+                <marker date="1448373276000" expanded="true" signature="833:916" placeholder="[...]" />
+                <marker date="1448373276000" expanded="true" signature="839:912" placeholder="{&quot;name&quot;: &quot;aksonov&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -338,8 +349,16 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.7916667">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1448373276000" expanded="true" signature="14:115" placeholder="{&quot;name&quot;: &quot;Pavlo Aksonov&quot;...}" />
+            <marker date="1448373276000" expanded="true" signature="135:191" placeholder="{&quot;react-redux&quot;: &quot;^3.1.0&quot;...}" />
+            <marker date="1448373276000" expanded="true" signature="206:266" placeholder="{&quot;test&quot;: &quot;mocha --compilers js:babel-core/register&quot;...}" />
+            <marker date="1448373276000" expanded="true" signature="289:483" placeholder="{&quot;babel&quot;: &quot;^6.1.18&quot;...}" />
+            <marker date="1448373276000" expanded="true" signature="608:772" placeholder="[...]" />
+            <marker date="1448373276000" expanded="true" signature="833:916" placeholder="[...]" />
+            <marker date="1448373276000" expanded="true" signature="839:912" placeholder="{&quot;name&quot;: &quot;aksonov&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>

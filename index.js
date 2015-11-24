@@ -1,6 +1,6 @@
 import React from 'react-native';
 const {View, Navigator, Text, StyleSheet} = React;
-import Actions from './actions';
+import {Actions, CoreActions} from './actions';
 import {INIT, PUSH, REPLACE, POP, DISMISS, RESET} from './actions';
 
 import routerReducer from './reducer';
@@ -44,6 +44,10 @@ class Router extends React.Component {
         super(props);
         this.routes = {};
         this.schemas = {};
+        var {dispatch} = props;
+        if (!dispatch){
+            throw new Error("No redux dispatch is provided to Router!");
+        }
 
         var self = this;
         this.initial = props.initial;
@@ -67,7 +71,7 @@ class Router extends React.Component {
                         }
                         var args = {name: name, data:data};
                         var action = child.props.type || 'push';
-                        return RouterActions[action](args);
+                        dispatch(CoreActions[action](args));
                     };
                 }
                 self.routes[name] = child.props;
@@ -82,12 +86,15 @@ class Router extends React.Component {
                     RouterActions[name] = function(data){
                         var props = self.extend({}, self.props);
                         props = self.extend(props, child.props);
-                        return RouterActions.custom({name, props, data})
+                        dispatch(CoreActions.custom({name, props, data}));
                     };
                 }
             }
         });
-        this.routerActions = bindActionCreators(Actions, props.dispatch);
+        let dispatched = bindActionCreators(CoreActions, dispatch);
+        for (var i in dispatched)
+            RouterActions[i] = dispatched[i];
+        this.routerActions = RouterActions;
         this.initialRoute =  this.routes[this.initial] || console.error("No initial route "+this.initial);
         this.state = {initial: this.initial};
     }
@@ -273,4 +280,4 @@ var styles = StyleSheet.create({
     }
 });
 
-module.exports = {Router: connect(state=>state.routerReducer)(Router), Action, Actions, Route, Animations, Schema, routerReducer}
+module.exports = {Router: connect(state=>state.routerReducer)(Router), Actions, Action, Route, Animations, Schema, routerReducer}
