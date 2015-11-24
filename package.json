@@ -8,6 +8,16 @@
     "react-redux": "^3.1.0",
     "redux": "^3.0.4"
   },
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register"
+  },
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.2.1",
+    "babel-plugin-typecheck": "^3.1.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18"
+  },
   "description": "React Native Router using Redux architecture",
   "directories": {},
   "installable": true,
@@ -31,5 +41,5 @@
   ],
   "name": "react-native-redux-router",
   "optionalDependencies": {},
-  "version": "1.0.0"
+  "version": "1.0.1"
 }

@@ -24,27 +24,17 @@ function filterParam(data){
     return data;
 }
 
-let Actions = {
+let CoreActions = {
     push: function(data) {
-        return {
-            ... filterParam(data),
-            type: PUSH
-        }
+        return Object.assign({type: PUSH}, filterParam(data));
     },
 
     pop: function(data = {}) {
-        console.log("POP ACTION");
-        return {
-            ... filterParam(data),
-            type: POP
-        }
+        return Object.assign({type: POP}, filterParam(data));
     },
 
     dismiss: function(data) {
-        return {
-            ... filterParam(data),
-            type: DISMISS
-        }
+        return Object.assign({type: DISMISS}, filterParam(data));
     },
 
     reset: function(initial) {
@@ -65,26 +55,21 @@ let Actions = {
     },
 
     custom: function(data) {
-        return {
-            ... filterParam(data),
-            type: CUSTOM
-        }
+        return Object.assign({type: CUSTOM}, filterParam(data));
     },
 
     replace: function(data) {
-        return {
-            ... filterParam(data),
-            type: REPLACE
-        }
+        return Object.assign({type: REPLACE}, filterParam(data));
     },
 
     select: function(data) {
-        return {
-            ... filterParam(data),
-            type: SELECT
-        }
+        return Object.assign({type: SELECT}, filterParam(data));
     }
-}
+};
+
+let Actions = Object.assign({}, CoreActions);
+
+export {CoreActions};
 
 export default Actions;
 

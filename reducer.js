@@ -36,12 +36,12 @@ export default function reducer(state = { routes: [], currentRoute: null}, actio
             if (state.routes.length <= num) {
                 throw new Error("Number of routes should be greater than pop() param: " + num);
             }
-            console.log("POP!");
             return {
                 mode: POP,
                 routes: [...state.routes.slice(0, state.routes.length - num)],
-                currentRoute: state.routes[state.routes[state.routes.length - num - 1]]
+                currentRoute: state.routes[state.routes.length - num - 1]
             };
+
         case DISMISS:
             if (state.routes.length <= 1) {
                 throw new Error("Number of routes should be greater than 1");
