@@ -48,7 +48,7 @@ export default function reducer(state = { routes: [], currentRoute: null}, actio
             return {
                 mode: DISMISS,
                 routes: [...state.routes.slice(0, state.routes.length - 1)],
-                currentRoute: state.routes[state.routes[state.routes.length - 2]]
+                currentRoute: state.routes[state.routes.length - 2]
             };
         case RESET:
             return {
