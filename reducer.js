@@ -21,12 +21,14 @@ export default function reducer(state = { routes: [], currentRoute: null}, actio
             };
         case PUSH:
             return {
+                data: action.data || null,
                 mode: PUSH,
                 routes: [...state.routes, action.name],
                 currentRoute: action.name
             };
         case REPLACE:
             return {
+                data: action.data || null,
                 mode: REPLACE,
                 routes: [...state.routes.slice(0, state.routes.length - 1), action.name],
                 currentRoute: action.name
