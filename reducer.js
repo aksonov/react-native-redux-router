@@ -54,7 +54,7 @@ export default function reducer(state = { routes: [], currentRoute: null}, actio
             return {
                 mode: RESET,
                 routes: [action.initial],
-                currentRoute: action.initial
+                initial: action.initial
             }
 
         default:
