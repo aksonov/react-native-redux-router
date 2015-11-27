@@ -1,5 +1,5 @@
 import React from 'react-native';
-const {View, Navigator, Text, StyleSheet} = React;
+const {View, Navigator, Text, TouchableWithoutFeedback, StyleSheet} = React;
 import {Actions, CoreActions} from './actions';
 import {INIT, PUSH, REPLACE, POP, DISMISS, RESET} from './actions';
 
@@ -114,7 +114,7 @@ class Router extends React.Component {
             }
             // check if route is popup
             if (route.schema=='popup'){
-                var element = React.createElement(route.component, Object.assign({}, route, page.data, {routes:this.routerActions}));
+                var element = React.createElement(route.component, Object.assign({}, route, page.data, {dispatch: this.props.dispatch, routes:this.routerActions}));
                 this.setState({modal: element});
             } else {
                 if (page.mode == REPLACE){
@@ -241,7 +241,7 @@ class Router extends React.Component {
         var modal = null;
         if (this.state.modal){
             modal = (<View style={styles.container}>
-                    <View style={[styles.container,{backgroundColor:'black',opacity:0.5},this.props.popupStyle]}/>
+                    <TouchableWithoutFeedback onPress={()=>Actions.dismiss()}><View style={[styles.container,{backgroundColor:'black',opacity:0.5},this.props.popupStyle]}/></TouchableWithoutFeedback>
                     {this.state.modal}
 
                 </View>
