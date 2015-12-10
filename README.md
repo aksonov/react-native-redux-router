@@ -1,6 +1,11 @@
 # react-native-redux-router
 React Native Router using Redux architecture
 
+## Important notice
+I've decided to stop supporting this component in favor to new release react-native-router-flux (https://github.com/aksonov/react-native-router-flux).
+The new version doesn't depend from concrete Flux/Redux implementation and allow you to build nested navigators easily. Also it allows to intercept route 'actions'
+from your store(s).
+
 ## Why I need to use it?
 - Use Redux actions to replace/push/pop screens with easy syntax like Actions.login for navigation to login screen
 - Forget about passing navigator object to all React elements, use actions from anywhere in your UI code.
