@@ -125,8 +125,8 @@ class Router extends React.Component {
             }
         }
         if (page.mode==POP){
-            var num = page.num || 1;
             var routes = this.refs.nav.getCurrentRoutes();
+            var num = page.num || (routes.length - page.routes.length);
             // pop only existing routes!
             if (num < routes.length) {
                 this.refs.nav.popToRoute(routes[routes.length - 1 - num]);
