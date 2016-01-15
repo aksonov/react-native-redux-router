@@ -3,15 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node_modules/react-native/packager/packager.sh"
+    "start": "node_modules/react-native/packager/packager.sh",
+    "clean": "cd node_modules; find . -name .babelrc | grep -v packager | xargs rm"
   },
   "dependencies": {
-    "react-native": "^0.14.2",
-    "react-native-button": "^1.2.1",
-    "react-native-navbar": "^0.8.0",
+    "react-native": "0.17.0",
+    "react-native-button": "~1.2.1",
+    "react-native-navbar": "~1.1.6",
     "react-native-redux-router": "^1.0.0",
-    "react-native-tabs": "^0.0.6",
-    "react-redux": "^3.1.0",
-    "redux": "^3.0.4"
+    "react-native-tabs": "^0.1.10",
+    "react-redux": "^3.1.2",
+    "redux": "^3.0.5",
+    "redux-logger": "*"
   }
 }

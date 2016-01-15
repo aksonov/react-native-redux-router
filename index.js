@@ -156,7 +156,7 @@ class Router extends React.Component {
         var footer = route.footer;
 
         if (navBar) {
-            navBar = React.addons.cloneWithProps(navBar, {
+            navBar = React.cloneElement(navBar, {
                 navigator: navigator,
                 route: route,
                 dispatch:this.props.dispatch,
@@ -164,7 +164,7 @@ class Router extends React.Component {
             });
         }
         if (footer){
-            footer = React.addons.cloneWithProps(footer, {
+            footer = React.cloneElement(footer, {
                 navigator: navigator,
                 route: route,
                 dispatch:this.props.dispatch,
@@ -176,7 +176,7 @@ class Router extends React.Component {
             child = <Component key={route.name} navigator={navigator} route={route} {...route.passProps} routes={this.routerActions} dispatch={this.props.dispatch} />
         } else {
             child = React.Children.only(this.routes[route.name].children);
-            child = React.addons.cloneWithProps(child, {schemas: this.schemas});
+            child = React.cloneElement(child, {schemas: this.schemas});
         }
 
         return (
