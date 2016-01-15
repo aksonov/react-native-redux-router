@@ -10,10 +10,15 @@ var {NavBar, NavBarModal} = require('./components/NavBar');
 var Error = require('./components/Error');
 var Home = require('./components/Home');
 
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux/native';
+import createLogger from 'redux-logger';
 
-let store = createStore(combineReducers({routerReducer}));
+const loggerMiddleWare = createLogger();
+
+const createStoreWithMiddleware = applyMiddleware(loggerMiddleWare)(createStore);
+const reducer = combineReducers({routerReducer});
+let store = createStoreWithMiddleware(reducer);
 
 class App extends React.Component {
     render(){
