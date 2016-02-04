@@ -10,7 +10,7 @@ from your store(s).
 - Use Redux actions to replace/push/pop screens with easy syntax like Actions.login for navigation to login screen
 - Forget about passing navigator object to all React elements, use actions from anywhere in your UI code.
 - Configure all of your screens ("routes") once (define animations, nav bars, etc.), at one place and then just use short actions commands. For example if you use some special animation for Login screen, you don't need to code it anywhere where an user should be redirected to login screen.
-- Use route "schemas" to define common property for some screens. For example some screens are "modal" (i.e. have animation from bottom and have Cancel/Close nav button), so you could define group for them to avoid any code repeatition.
+- Use route "schemas" to define common property for some screens. For example some screens are "modal" (i.e. have animation from bottom and have Cancel/Close nav button), so you could define group for them to avoid any code repetition.
 - Use popup with Redux actions (see Error popup within Example project)
 - Hide nav bar for some screens easily
 
