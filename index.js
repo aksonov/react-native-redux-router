@@ -1,11 +1,12 @@
-import React from 'react-native';
-const {View, Navigator, Text, TouchableWithoutFeedback, StyleSheet} = React;
+import React from 'react';
+import ReactNative from 'react-native';
+const {View, Navigator, Text, TouchableWithoutFeedback, StyleSheet} = ReactNative;
 import {Actions, CoreActions} from './actions';
 import {INIT, PUSH, REPLACE, POP, DISMISS, RESET} from './actions';
 
 import routerReducer from './reducer';
 import Animations from './Animations';
-import { connect } from 'react-redux/native'
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 // schema class represents schema for routes and it is processed inside Router component
