@@ -1,19 +1,29 @@
 'use strict';
 
-var React = require('react-native');
-var {View, Text, StyleSheet, TouchableHighlight} = React;
-var Button = require('react-native-button');
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight
+} from 'react-native';
+import Button from 'react-native-button'
 
-class Launch extends React.Component {
+class Launch extends Component {
     render(){
         var Actions = this.props.routes;
         return (
             <View style={styles.container}>
                 <Text>Launch page</Text>
-                <Button onPress={()=>Actions.login({data:"Custom data", title:'Custom title' })}>Go to Login page</Button>
-                <Button onPress={Actions.register}>Go to Register page</Button>
+                <TouchableHighlight onPress={()=>Actions.login({data:"Custom data", title:'Custom title' })}>
+                <View>
+                   <Text> Click</Text>
+                </View>
+                </TouchableHighlight>
+                {/*<Button onPress={Actions.register}>Go to Register page</Button>
                 <Button onPress={()=>Actions.register2({title: 'Register 2'})}>Go to Register page without animation</Button>
-                <Button onPress={()=>Actions.error("Error message")}>Go to Error page</Button>
+                <Button onPress={()=>Actions.error("Error message")}>Go to Error page</Button>*/}
             </View>
         );
     }
