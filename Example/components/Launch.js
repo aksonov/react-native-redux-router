@@ -16,14 +16,10 @@ class Launch extends Component {
         return (
             <View style={styles.container}>
                 <Text>Launch page</Text>
-                <TouchableHighlight onPress={()=>Actions.login({data:"Custom data", title:'Custom title' })}>
-                <View>
-                   <Text> Click</Text>
-                </View>
-                </TouchableHighlight>
-                {/*<Button onPress={Actions.register}>Go to Register page</Button>
+                <Button onPress={()=>Actions.login({data:"Custom data", title:'Custom title' })}>Go to Login page</Button>
+                <Button onPress={Actions.register}>Go to Register page</Button>
                 <Button onPress={()=>Actions.register2({title: 'Register 2'})}>Go to Register page without animation</Button>
-                <Button onPress={()=>Actions.error("Error message")}>Go to Error page</Button>*/}
+                <Button onPress={()=>Actions.error("Error message")}>Go to Error page</Button>
             </View>
         );
     }
