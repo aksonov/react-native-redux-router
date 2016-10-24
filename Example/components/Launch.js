@@ -1,10 +1,16 @@
 'use strict';
 
-var React = require('react-native');
-var {View, Text, StyleSheet, TouchableHighlight} = React;
-var Button = require('react-native-button');
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  TouchableHighlight
+} from 'react-native';
+import Button from 'react-native-button'
 
-class Launch extends React.Component {
+class Launch extends Component {
     render(){
         var Actions = this.props.routes;
         return (

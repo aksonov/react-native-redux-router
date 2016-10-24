@@ -1,11 +1,16 @@
 'use strict';
 
 var NavigationBar = require('react-native-navbar');
-var React = require('react-native');
-var {StyleSheet,View} = React;
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 var {Router, Route, Animations, Schema} = require('react-native-redux-router');
 
-class NavBarBase extends React.Component {
+class NavBarBase extends Component {
    onPrev(){
        var Actions = this.props.routes;
        if (this.props.onPrev){

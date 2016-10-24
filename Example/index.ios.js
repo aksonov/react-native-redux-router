@@ -1,7 +1,12 @@
 'use strict';
 
-var React = require('react-native');
-var {AppRegistry, StyleSheet,Text,View} = React;
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 var Launch = require('./components/Launch');
 var Register = require('./components/Register');
 var Login = require('./components/Login');
@@ -11,7 +16,7 @@ var Error = require('./components/Error');
 var Home = require('./components/Home');
 
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux/native';
+import { Provider } from 'react-redux';
 import createLogger from 'redux-logger';
 
 const loggerMiddleWare = createLogger();
@@ -20,7 +25,7 @@ const createStoreWithMiddleware = applyMiddleware(loggerMiddleWare)(createStore)
 const reducer = combineReducers({routerReducer});
 let store = createStoreWithMiddleware(reducer);
 
-class App extends React.Component {
+class App extends Component {
     render(){
         return (
             <View style={{flex:1}}>
@@ -43,12 +48,12 @@ class App extends React.Component {
         );
     }
 }
-class Example extends React.Component {
+class Example extends Component {
     render() {
         return (
-            <Provider store={store}>
-                {() => <App />}
-            </Provider>
+         <Provider store={store}>
+            <App />
+        </Provider>
         );
     }
 }
