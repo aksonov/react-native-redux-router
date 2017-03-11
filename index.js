@@ -124,7 +124,7 @@ class Router extends React.Component {
                 	let rs = this.refs.nav.state.routeStack,
                         currentRoute = rs[rs.length - 1];
 
-                    if ( !currentRoute || currentRoute.name != route.name ) {
+                    if ( !currentRoute || currentRoute.name != route.name || page.data.data.animation ) {
                         this.refs.nav.push(this.getRoute(route, page.data))
                     }
                 }
