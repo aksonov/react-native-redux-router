@@ -40,7 +40,7 @@
       "email": "pavlo.aksonov@gmail.com"
     }
   ],
-  "name": "react-native-redux-router",
+  "name": "react-native-redux-router-fixed",
   "optionalDependencies": {},
-  "version": "1.0.7"
+  "version": "1.0.0"
 }
